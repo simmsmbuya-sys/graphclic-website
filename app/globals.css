@@ -1,0 +1,401 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --graphclic-red: #991B1E;
+  --graphclic-gold: #D4AF37;
+}
+
+body {
+  color: #000000;
+  background: #ffffff;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure content is visible even if animations don't trigger */
+main {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+/* Fallback for motion elements that don't animate */
+[style*="opacity:0"] {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Parallax effect for fixed backgrounds */
+section[class*="h-screen"] {
+  position: relative;
+}
+
+/* Ensure smooth scrolling performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Scroll-triggered image animations */
+.image-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.image-container.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-wrapper {
+  transition: transform 1.5s ease-out;
+}
+
+.group:hover .image-wrapper {
+  transform: scale(1.08);
+}
+
+.overlay-gradient {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
+}
+
+.why-graphclic .image-container.animate-fade-up ~ .overlay-gradient,
+.ready-story .image-container.animate-fade-up ~ .overlay-gradient {
+  opacity: 1;
+}
+
+/* ========================================
+   YOUTUBE UI MASKING - Custom Video Player
+   ========================================
+   These CSS rules hide all YouTube UI elements
+   to create a fully masked, branded video player
+   ======================================== */
+
+/* Allow pointer events on iframe for video playback */
+iframe[src*="youtube.com"] {
+    pointer-events: auto !important;
+}
+
+/* Hide ALL YouTube Player UI Elements */
+
+/* YouTube Watermark/Branding */
+.ytp-watermark,
+.ytp-watermark-logo,
+.ytp-watermark-path,
+.ytp-branding-logo,
+.ytp-branding-container,
+.ytp-branding-context-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Top Chrome Bar (Title, Controls) - Ultra Aggressively hide ALL YouTube titles */
+.ytp-chrome-top,
+.ytp-chrome-top-buttons,
+.ytp-title,
+.ytp-title-channel,
+.ytp-title-text,
+.ytp-title-link,
+.ytp-title-expanded,
+.ytp-title-expanded-content,
+.ytp-title-expanded-heading,
+.ytp-title-expanded-overlay,
+.ytp-title-expanded-text,
+.ytp-title-channel-logo,
+.ytp-title-channel-name,
+.ytp-title-channel-wrapper,
+.ytp-show-cards-title,
+.ytp-visibility-notification,
+.ytp-visibility-notification-text,
+.ytp-visibility-notification-link,
+[class*="ytp-title"],
+[id*="ytp-title"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    text-indent: -9999px !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+}
+
+/* Hide entire top chrome bar completely */
+.ytp-chrome-top {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    min-height: 0 !important;
+}
+
+/* Bottom Controls Bar */
+.ytp-chrome-bottom,
+.ytp-chrome-controls,
+.ytp-left-controls,
+.ytp-right-controls,
+.ytp-gradient-bottom,
+.ytp-chrome-controls::after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Video Controls (Progress Bar, Buttons) */
+.ytp-progress-bar-container,
+.ytp-progress-bar,
+.ytp-scroll-min,
+.ytp-scroll-max,
+.ytp-button,
+.ytp-play-button,
+.ytp-pause-button,
+.ytp-volume-panel,
+.ytp-mute-button,
+.ytp-fullscreen-button,
+.ytp-settings-button,
+.ytp-chrome-controls {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Pause/Play Overlay */
+.ytp-pause-overlay,
+.ytp-pause-overlay-container,
+.ytp-pause-overlay-controls,
+.ytp-pause-overlay-content {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Cards & Annotations */
+.ytp-ce-element,
+.ytp-ce-shadow,
+.ytp-ce-covering-overlay,
+.ytp-ce-size-1920,
+.ytp-cards-teaser,
+.ytp-cards-teaser-text,
+.ytp-cards-teaser-box,
+.ytp-impression-link {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* End Screen Cards */
+.ytp-endscreen-content,
+.ytp-endscreen-prenext,
+.ytp-endscreen-next,
+.ytp-endscreen-previous,
+.ytp-suggestion-set,
+.ytp-suggestion-overlay {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Related Videos */
+.ytp-watch-later-button,
+.ytp-share-button,
+.ytp-info-button,
+.ytp-menuitem,
+.ytp-popup,
+.ytp-panel-menu,
+.ytp-popup-animation {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Settings Menu */
+.ytp-settings-menu,
+.ytp-settings-button,
+.ytp-panel-menu,
+.ytp-menuitem-label,
+.ytp-menuitem-content {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Hide ALL share, copy link, and social sharing buttons */
+.ytp-share-button,
+.ytp-share-button-visible,
+.ytp-share-panel,
+.ytp-share-panel-inner-content,
+.ytp-share-panel-close,
+.ytp-copylink-button,
+.ytp-copylink-icon,
+.ytp-menu-share,
+.ytp-menuitem[aria-label*="share" i],
+.ytp-menuitem[aria-label*="copy" i],
+.ytp-menuitem[aria-label*="link" i],
+[aria-label*="Share" i],
+[aria-label*="Copy link" i],
+[aria-label*="Copy" i],
+[title*="Share" i],
+[title*="Copy link" i],
+[title*="Copy" i],
+button[aria-label*="share" i],
+button[aria-label*="copy" i],
+button[title*="Share" i],
+button[title*="Copy" i],
+.ytp-share-icon,
+.ytp-share-title {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    text-indent: -9999px !important;
+}
+
+/* Live Chat & Badges */
+.ytp-live-badge,
+.ytp-ad-overlay-container,
+.ytp-ad-overlay-slot,
+.ytp-ad-text,
+.ytp-ad-overlay-image,
+.ytp-ad-module {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Loading Spinner & Buffering */
+.ytp-spinner,
+.ytp-spinner-container,
+.ytp-loading {
+    /* Keep loading visible but styled to match our brand */
+    opacity: 0.3 !important;
+}
+
+/* Scrubber & Timeline */
+.ytp-scrubber-container,
+.ytp-scrubber-button,
+.ytp-chapters-container,
+.ytp-chapter-title-content {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Subtitles/Captions - Completely hide ALL text on video */
+.ytp-caption-window-container,
+.ytp-caption-window,
+.ytp-caption-segment,
+.ytp-caption-text,
+.ytp-caption-window-text,
+.ytp-caption,
+.ytp-subtitles,
+.ytp-caption-window-rollup,
+.ytp-caption-visual-line,
+.ytp-caption-text-content {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    text-indent: -9999px !important;
+}
+
+/* Hide ALL text overlays and copy on video */
+.ytp-ce-shadow-text,
+.ytp-ce-text,
+.ytp-ce-attribution-text,
+.ytp-visibility-notification-text,
+.ytp-title-expanded-text,
+.ytp-show-cards-title,
+.ytp-cards-teaser-text,
+.ytp-overlay-text {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    text-indent: -9999px !important;
+}
+
+/* Tooltips & Hover Effects */
+.ytp-tooltip,
+.ytp-tooltip-bg,
+.ytp-tooltip-text-wrapper,
+.ytp-tooltip-text,
+.ytp-tooltip-arrow {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Ensure video area itself is clean */
+.ytp-player-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hide any iframe overlay elements */
+iframe[src*="youtube.com"]::before,
+iframe[src*="youtube.com"]::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Ensure video canvas remains visible and interactive */
+.ytp-player-content,
+.ytp-player-video-canvas,
+.ytp-videowall-still,
+.video-stream,
+.video-stream[style] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Hide any remaining overlay elements that might appear */
+.ytp-autohide:not(.ytp-player-content):not(.video-stream) {
+    opacity: 0 !important;
+}

@@ -1,0 +1,108 @@
+================================================================================
+DNS RECORDS FOR graphclic.com
+================================================================================
+
+HOSTING PLATFORM: Vercel (Recommended)
+DOMAIN: graphclic.com
+
+================================================================================
+REQUIRED DNS RECORDS
+================================================================================
+
+1. A RECORD (Root Domain)
+   ──────────────────────────────────────────────────────────────────────────
+   Type:     A
+   Name:     @
+   Value:    76.76.21.21
+   TTL:      3600 (or Auto)
+   Purpose:  Points graphclic.com to Vercel's servers
+
+2. CNAME RECORD (WWW Subdomain)
+   ──────────────────────────────────────────────────────────────────────────
+   Type:     CNAME
+   Name:     www
+   Value:    cname.vercel-dns.com
+   TTL:      3600 (or Auto)
+   Purpose:  Points www.graphclic.com to Vercel
+
+================================================================================
+ALTERNATIVE: USE VERCEL NAMESERVERS (Easier)
+================================================================================
+
+Instead of adding individual DNS records, you can change your nameservers to:
+
+Nameserver 1:  ns1.vercel-dns.com
+Nameserver 2:  ns2.vercel-dns.com
+
+This allows Vercel to manage all DNS records automatically.
+
+================================================================================
+STEP-BY-STEP INSTRUCTIONS
+================================================================================
+
+1. Log in to your domain registrar (GoDaddy, Namecheap, etc.)
+
+2. Navigate to DNS Management for graphclic.com
+
+3. Add the A record:
+   - Type: A
+   - Name/Host: @ (or leave blank, or enter "graphclic.com")
+   - Value/Points to: 76.76.21.21
+   - TTL: 3600
+
+4. Add the CNAME record:
+   - Type: CNAME
+   - Name/Host: www
+   - Value/Points to: cname.vercel-dns.com
+   - TTL: 3600
+
+5. Save changes
+
+6. Wait 15-60 minutes for DNS propagation
+
+7. Add domain in Vercel dashboard:
+   - Go to: https://vercel.com/dashboard
+   - Select your project
+   - Settings → Domains → Add Domain
+   - Enter: graphclic.com
+
+8. SSL certificate will be automatically provisioned
+
+================================================================================
+VERIFICATION
+================================================================================
+
+After adding DNS records, verify they're working:
+
+Check A Record:
+  dig graphclic.com A
+  Should return: 76.76.21.21
+
+Check CNAME:
+  dig www.graphclic.com CNAME
+  Should return: cname.vercel-dns.com
+
+Online Tools:
+  - https://www.whatsmydns.net/#A/graphclic.com
+  - https://dnschecker.org/#A/graphclic.com
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+✓ DNS propagation typically takes 15-60 minutes
+✓ Maximum propagation time: 48 hours (rare)
+✓ SSL certificate is automatically provisioned by Vercel
+✓ HTTPS will be active once DNS propagates
+✓ Both graphclic.com and www.graphclic.com will work
+
+================================================================================
+SUPPORT
+================================================================================
+
+If you need help:
+- See DNS_SETUP.md for detailed instructions
+- Vercel Docs: https://vercel.com/docs/concepts/projects/domains
+- Check DNS propagation: https://www.whatsmydns.net
+
+================================================================================

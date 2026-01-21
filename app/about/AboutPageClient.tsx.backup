@@ -1,0 +1,47 @@
+import type { Metadata } from 'next';
+import AboutPageClient from './AboutPageClient';
+
+export const metadata: Metadata = {
+  title: "About GraphClic | Award-Winning Video Production DMV",
+  description: "Award-winning video production company in Washington DC, Maryland & Virginia. 30+ years combined experience. GraphClic Studios for corporate video, GraphClic Films for documentaries. Serving DMV businesses.",
+  keywords: [
+    "About GraphClic",
+    "Video production company Washington DC",
+    "Award-winning video production DMV",
+    "Video production team Maryland",
+    "Video production team Virginia",
+    "Corporate video production company",
+    "Documentary film production company",
+    "GraphClic Studios",
+    "GraphClic Films"
+  ],
+  openGraph: {
+    title: "About GraphClic | Award-Winning Video Production DMV",
+    description: "Award-winning video production company in Washington DC, Maryland & Virginia. 30+ years combined experience.",
+    url: "https://graphclic.com/about",
+    siteName: "GraphClic",
+    images: [
+      {
+        url: "/images/graphclic-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "About GraphClic Video Production Washington DC",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About GraphClic | Award-Winning Video Production DMV",
+    description: "Award-winning video production company in Washington DC, Maryland & Virginia.",
+    images: ["/images/graphclic-logo.png"],
+  },
+  alternates: {
+    canonical: "https://graphclic.com/about",
+  },
+};
+
+export default function AboutPage() {
+  return <AboutPageClient />;
+}
