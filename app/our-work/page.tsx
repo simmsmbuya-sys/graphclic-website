@@ -241,10 +241,10 @@ export default function OurWorkPage() {
                     {featuredProject.category}
                   </span>
                 </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4">
                   {featuredProject.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 px-4">
                   {featuredProject.client}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -279,7 +279,7 @@ export default function OurWorkPage() {
         {/* Corporate Projects Row - Apple TV Style */}
         <section className="py-12 bg-black">
           <div className="mb-6 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Corporate</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Corporate</h2>
             <p className="text-gray-400">B2B video production for brands</p>
           </div>
           
@@ -375,7 +375,7 @@ export default function OurWorkPage() {
         {/* Documentary Projects Row - Apple TV Style */}
         <section className="py-12 bg-black">
           <div className="mb-6 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Documentary</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Documentary</h2>
             <p className="text-gray-400">Impact documentaries that drive change</p>
           </div>
           
@@ -500,7 +500,7 @@ export default function OurWorkPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4"
             >
               Ready to Tell Your Story?
             </motion.h2>

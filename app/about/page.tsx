@@ -23,7 +23,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-white mb-4 sm:mb-6 px-4"
             style={{
               textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)',
             }}
@@ -36,7 +36,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-4"
             style={{
               textShadow: '0 2px 10px rgba(0,0,0,0.8)',
             }}
@@ -56,8 +56,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-4xl md:text-5xl font-black text-graphclic-gold mb-2">30+</div>
-              <div className="text-white/80 text-sm md:text-base">Years Experience</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-graphclic-gold mb-2">30+</div>
+              <div className="text-white/80 text-xs sm:text-sm md:text-base">Years Experience</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -65,8 +65,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="text-4xl md:text-5xl font-black text-graphclic-gold mb-2">2</div>
-              <div className="text-white/80 text-sm md:text-base">Divisions</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-graphclic-gold mb-2">2</div>
+              <div className="text-white/80 text-xs sm:text-sm md:text-base">Divisions</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -74,8 +74,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="text-4xl md:text-5xl font-black text-graphclic-gold mb-2">1</div>
-              <div className="text-white/80 text-sm md:text-base">Mission</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl font-black text-graphclic-gold mb-2">1</div>
+              <div className="text-white/80 text-xs sm:text-sm md:text-base">Mission</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-black text-black mb-8 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-6 sm:mb-8 text-center px-4"
           >
             Our Story
           </motion.h2>
@@ -130,7 +130,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-black text-white mb-16 text-center"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-12 sm:mb-16 text-center px-4"
           >
             Two Divisions. One Mission.
           </motion.h2>
@@ -144,7 +144,7 @@ export default function AboutPage() {
               className="bg-gray-900 p-8 rounded-lg border border-gray-800"
             >
               <Briefcase className="w-12 h-12 text-graphclic-red mb-4" />
-              <h3 className="text-3xl font-black text-graphclic-red mb-4">GraphClic Studios</h3>
+              <h3 className="text-2xl sm:text-3xl font-black text-graphclic-red mb-3 sm:mb-4">GraphClic Studios</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Strategic B2B video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers.
               </p>
@@ -162,7 +162,7 @@ export default function AboutPage() {
               className="bg-gray-900 p-8 rounded-lg border border-gray-800"
             >
               <Film className="w-12 h-12 text-graphclic-gold mb-4" />
-              <h3 className="text-3xl font-black text-graphclic-gold mb-4">GraphClic Films</h3>
+              <h3 className="text-2xl sm:text-3xl font-black text-graphclic-gold mb-3 sm:mb-4">GraphClic Films</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Impact-driven documentary filmmaking that bridges cultures, amplifies underrepresented voices, and drives social change through authentic storytelling.
               </p>
@@ -182,7 +182,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-black text-white mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 sm:mb-8 px-4"
           >
             Ready to Tell Your Story?
           </motion.h2>

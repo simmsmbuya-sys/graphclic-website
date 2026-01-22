@@ -20,10 +20,10 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="max-w-[1400px] text-center"
           >
-            <h1 className="text-6xl sm:text-7xl md:text-8xl font-black text-graphclic-red mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight px-4">
               Our Services
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-800 max-w-[700px] mx-auto leading-relaxed font-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 max-w-[700px] mx-auto leading-relaxed font-medium px-4">
               Two specialized divisions working in harmony to create powerful video content that drives business results and inspires social change.
             </p>
           </motion.div>
@@ -66,11 +66,11 @@ export default function ServicesPageClient() {
                 01 — CORPORATE
               </div>
               
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black text-graphclic-red mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight">
                 GraphClic Studios
               </h2>
               
-              <h3 className="text-2xl sm:text-3xl text-graphclic-red/90 mb-8 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-red/90 mb-6 sm:mb-8 font-bold">
                 B2B Video Production
               </h3>
               
@@ -133,11 +133,11 @@ export default function ServicesPageClient() {
                 02 — DOCUMENTARY
               </div>
               
-              <h2 className="text-5xl sm:text-6xl md:text-7xl font-black text-graphclic-gold mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-4 sm:mb-6 tracking-tight">
                 GraphClic Films
               </h2>
               
-              <h3 className="text-2xl sm:text-3xl text-graphclic-gold/90 mb-8 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-gold/90 mb-6 sm:mb-8 font-bold">
                 Impact-Driven Documentary Filmmaking
               </h3>
               
@@ -213,7 +213,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="mb-16"
           >
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-black text-graphclic-red mb-8 tracking-tight text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-6 sm:mb-8 tracking-tight text-center px-4">
               Our Approach
             </h2>
           </motion.div>
@@ -249,10 +249,10 @@ export default function ServicesPageClient() {
                 transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
                 className="space-y-4 p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
               >
-                <div className="text-4xl md:text-5xl font-light text-gray-300 mb-4">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-300 mb-3 sm:mb-4">
                   {principle.number}
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-graphclic-red mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-graphclic-red mb-3 sm:mb-4">
                   {principle.title}
                 </h3>
                 <p className="text-base sm:text-lg text-gray-800 leading-relaxed font-medium">
@@ -274,7 +274,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="space-y-8"
           >
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-10 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-6 sm:mb-8 md:mb-10 tracking-tight px-4">
               Let&apos;s Create Together
             </h2>
             <Link href="/contact">
