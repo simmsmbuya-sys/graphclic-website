@@ -212,37 +212,6 @@ export default function StarzHero() {
                   {currentSlideData.description}
                 </motion.p>
 
-                {/* CTA Buttons */}
-                <motion.div
-                  initial={false}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                  className="flex flex-col gap-4 mt-6 sm:mt-8 px-4 sm:px-6"
-                >
-                  {/* Primary Button - Red */}
-                  <Link href={currentSlideData.primaryButton.href || '#'} className="w-full sm:w-auto">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full sm:w-auto px-8 py-4 sm:py-4 bg-graphclic-red hover:bg-graphclic-red-dark text-white text-base sm:text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(153,27,30,0.5)] hover:shadow-[0_6px_30px_rgba(153,27,30,0.7)] min-h-[44px]"
-                    >
-                      {currentSlideData.primaryButton.text}
-                      <ArrowRight size={20} />
-                    </motion.button>
-                  </Link>
-
-                  {/* Secondary Button - Glass morphism */}
-                  <Link href={currentSlideData.secondaryButton.href || '#'} className="w-full sm:w-auto">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full sm:w-auto px-8 py-4 sm:py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border-2 border-white/30 text-white text-base sm:text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3 min-h-[44px]"
-                    >
-                      <Play size={20} fill="currentColor" />
-                      {currentSlideData.secondaryButton.text}
-                    </motion.button>
-                  </Link>
-                </motion.div>
               </motion.div>
             </AnimatePresence>
           </div>
