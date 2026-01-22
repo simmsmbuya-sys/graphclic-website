@@ -20,12 +20,6 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = [
-    { href: '/services', label: 'Services' },
-    { href: '/our-work', label: 'Our Work' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
-  ];
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -39,19 +33,25 @@ export default function Navigation() {
     };
   }, [isMobileMenuOpen]);
 
+  const menuItems = [
+    { href: '/services', label: 'SERVICES' },
+    { href: '/our-work', label: 'OUR WORK' },
+    { href: '/about', label: 'ABOUT' },
+  ];
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'bg-black/95 backdrop-blur-md border-b border-gray-800 shadow-lg'
+            ? 'bg-black/95 backdrop-blur-md'
             : 'bg-black/30 backdrop-blur-sm'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group z-50">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-20 lg:h-24">
+            {/* Logo - Elegant Serif */}
+            <Link href="/" className="flex items-center group z-50">
               {!logoError ? (
                 <Image
                   src="/images/graphclic-logo.png"
@@ -64,24 +64,32 @@ export default function Navigation() {
                   onError={() => setLogoError(true)}
                 />
               ) : (
-                <div className="flex items-center gap-1">
-                  <span className="text-white font-bold text-lg sm:text-xl group-hover:text-graphclic-gold transition-colors">Graph</span>
-                  <span className="text-graphclic-gold font-bold text-lg sm:text-xl">Clic</span>
+                <div className="flex items-center">
+                  <span className="text-white text-2xl font-light tracking-wide group-hover:opacity-90 transition-opacity" style={{ fontFamily: 'serif' }}>Graph</span>
+                  <span className="text-graphclic-gold text-2xl font-light tracking-wide" style={{ fontFamily: 'serif' }}>Clic</span>
                 </div>
               )}
             </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Menu - Premium, Understated */}
+            <div className="hidden md:flex items-center gap-12">
               {menuItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-300 hover:text-graphclic-gold transition-colors font-medium"
+                  className="relative text-gray-300 font-light text-sm uppercase tracking-widest transition-all duration-300 group"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-graphclic-gold transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
+              {/* CTA Button - Minimal Outlined */}
+              <Link
+                href="/contact"
+                className="px-6 py-2 border border-graphclic-gold text-graphclic-gold font-light text-sm uppercase tracking-widest transition-all duration-300 hover:bg-graphclic-gold hover:text-black"
+              >
+                Let&apos;s Talk
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -96,7 +104,7 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Full Screen, Cinematic */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
@@ -105,40 +113,63 @@ export default function Navigation() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4 }}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
+              className="fixed inset-0 bg-black z-40 md:hidden"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E")`,
+              }}
             />
-            {/* Menu Panel */}
+            {/* Menu Panel - Full Screen */}
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-black/95 backdrop-blur-md z-50 md:hidden shadow-2xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              className="fixed inset-0 bg-black z-50 md:hidden flex flex-col items-center justify-center"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E")`,
+              }}
             >
-              <div className="flex flex-col h-full pt-20 px-6">
-                {/* Close Button */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="absolute top-4 right-4 text-white p-2"
-                  aria-label="Close menu"
-                >
-                  <X size={24} />
-                </button>
-                {/* Menu Items */}
-                <div className="flex flex-col gap-6">
-                  {menuItems.map((item) => (
+              {/* Close Button - Top Right */}
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-8 right-8 text-white p-2"
+                aria-label="Close menu"
+              >
+                <X size={28} className="text-gray-400" />
+              </button>
+              {/* Menu Items - Large, Touchable */}
+              <div className="flex flex-col gap-8 text-center">
+                {menuItems.map((item, index) => (
+                  <motion.div
+                    key={item.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
                     <Link
-                      key={item.href}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-white text-xl font-semibold hover:text-graphclic-gold transition-colors py-3 border-b border-gray-800 min-h-[44px] flex items-center"
+                      className="text-white text-3xl font-light uppercase tracking-widest py-6 block hover:text-graphclic-gold transition-colors duration-300"
                     >
                       {item.label}
                     </Link>
-                  ))}
-                </div>
+                  </motion.div>
+                ))}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: menuItems.length * 0.1 }}
+                >
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="inline-block mt-8 px-8 py-4 border border-graphclic-gold text-graphclic-gold text-xl font-light uppercase tracking-widest hover:bg-graphclic-gold hover:text-black transition-all duration-300"
+                  >
+                    Let&apos;s Talk
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
           </>

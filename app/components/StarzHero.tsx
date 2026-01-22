@@ -150,17 +150,25 @@ export default function StarzHero() {
               )}
             </motion.div>
 
-            {/* Dark Gradient Overlays - Lighter for better visibility */}
+            {/* Dark Gradient Overlays - Deeper, more dramatic */}
             {/* Left-to-right gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent pointer-events-none" />
             {/* Top-to-bottom gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/50 pointer-events-none" />
+            {/* Film Grain Texture Overlay */}
+            <div 
+              className="absolute inset-0 pointer-events-none opacity-[0.05]"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
+                backgroundSize: '200px 200px',
+              }}
+            />
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-20 h-full flex items-center pt-16 sm:pt-0">
+      <div className="relative z-20 h-full flex items-center pt-20 sm:pt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
             <AnimatePresence mode="wait">
@@ -172,32 +180,34 @@ export default function StarzHero() {
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 className="space-y-4 sm:space-y-6"
               >
-                {/* Headline */}
+                {/* Headline - Cinematic Typography */}
                 <motion.h1
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.15] sm:leading-[1.1] text-white px-4 sm:px-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  style={{ letterSpacing: '-0.02em' }}
                 >
                   {currentSlideData.headline}
                 </motion.h1>
 
-                {/* Subtitle - Gold */}
+                {/* Subtitle - Gold, Larger, More Prominent */}
                 <motion.h2
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.15] sm:leading-[1.1] text-graphclic-gold px-4 sm:px-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-black leading-[1.1] text-graphclic-gold px-4 sm:px-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  style={{ letterSpacing: '-0.02em' }}
                 >
                   {currentSlideData.subtitle}
                 </motion.h2>
 
-                {/* Description */}
+                {/* Description - Lighter Weight, More Breathing Room */}
                 <motion.p
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-lg sm:text-xl md:text-xl text-white/95 max-w-2xl mt-4 sm:mt-6 px-4 sm:px-6 leading-[1.7] sm:leading-relaxed font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                  className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-6 sm:mt-8 px-4 sm:px-6 leading-[1.8] sm:leading-relaxed font-light drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 >
                   {currentSlideData.description}
                 </motion.p>
@@ -305,6 +315,24 @@ export default function StarzHero() {
           <p className="text-white/70 text-xs font-medium">Scroll</p>
         </motion.div>
       </motion.div>
+
+      {/* Trust Indicators - Below Hero */}
+      <div className="absolute bottom-0 left-0 right-0 z-30 bg-black/80 backdrop-blur-sm border-t border-gray-800/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
+          <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-12 text-white/70 text-xs sm:text-sm font-light uppercase tracking-widest">
+            <span className="flex items-center gap-2">
+              <span className="text-graphclic-gold">★</span>
+              Emmy Award-Winning Team
+            </span>
+            <span className="hidden sm:inline">•</span>
+            <span>30+ Years Experience</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Fortune 500 Clients</span>
+            <span className="hidden sm:inline">•</span>
+            <span>DMV&apos;s Premier Studio</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

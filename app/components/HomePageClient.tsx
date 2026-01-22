@@ -34,66 +34,137 @@ export default function HomePageClient() {
       <h1 className="sr-only">GraphClic - B2B Video Production & Documentary Films Washington DC</h1>
       <StarzHero />
 
-      {/* Why GraphClic Section */}
-      <section className="relative min-h-[70vh] sm:min-h-[85vh] md:h-screen w-full overflow-hidden group why-graphclic">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 w-full h-full image-container" style={{ transform: 'scale(1.05)' }}>
-            <div className="absolute inset-0 w-full h-full image-wrapper">
-              <Image
-                src="/images/hero/image2.jpg"
-                alt="B2B video production equipment GraphClic Washington DC"
-                fill
-                priority
-                className="object-cover object-center"
-                quality={90}
-                sizes="100vw"
-              />
-            </div>
-          </div>
-          <div 
-            className="absolute inset-0 w-full h-full overlay-gradient"
-            style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.5))'
-            }}
-          />
-        </div>
+      {/* What Sets Us Apart - Credibility Section */}
+      <section className="relative bg-[#FAFAFA] py-20 sm:py-24 md:py-32 lg:py-40">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16 sm:mb-20 md:mb-24"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-black mb-4 tracking-tight">
+              What Sets Us Apart
+            </h2>
+            <div className="w-24 h-[1px] bg-graphclic-gold mx-auto"></div>
+          </motion.div>
 
-        <div className="relative z-10 min-h-[70vh] sm:min-h-[85vh] md:h-full flex items-center justify-center py-16 sm:py-20 md:py-0 px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto text-center">
+          {/* Credibility Cards */}
+          <div className="grid md:grid-cols-3 gap-8 sm:gap-12 md:gap-16">
+            {/* Card 1: Broadcast Pedigree */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-              className="space-y-4 sm:space-y-5 md:space-y-6"
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="relative bg-white p-8 sm:p-10 md:p-12 group"
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.2] sm:leading-[1.15] md:leading-[1.1] tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-              >
-                B2B Video Production & Documentary Films in Washington DC
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.6 }}
-                className="text-base sm:text-lg md:text-xl lg:text-xl text-white/95 max-w-4xl mx-auto leading-[1.7] sm:leading-relaxed font-normal mt-4 sm:mt-5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-              >
-                <strong className="font-bold text-white">GraphClic</strong> is the leading B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services. Explore our <Link href="/services" className="text-graphclic-gold hover:text-yellow-400 underline font-semibold">B2B video production services</Link> or <Link href="/about" className="text-graphclic-gold hover:text-yellow-400 underline font-semibold">learn more about our team</Link>.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, scaleX: 0 }}
-                whileInView={{ opacity: 1, scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.8 }}
-                className="flex justify-center pt-4 sm:pt-5"
-              >
-                <div className="w-24 sm:w-32 md:w-40 h-1 bg-graphclic-gold"></div>
-              </motion.div>
+              {/* Number Badge */}
+              <div className="absolute top-6 right-6 text-[120px] sm:text-[150px] font-light text-gray-100 leading-none -z-0">
+                01
+              </div>
+              {/* Image */}
+              <div className="relative h-[250px] mb-6 overflow-hidden">
+                <Image
+                  src="/images/hero/image2.jpg"
+                  alt="Broadcast video production team GraphClic"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl sm:text-3xl font-light text-black mb-4 tracking-tight">
+                  Broadcast Pedigree, Business Results
+                </h3>
+                <p className="text-gray-700 font-light leading-relaxed text-base sm:text-lg mb-6">
+                  Our team has produced for CNN, National Geographic, ESPN, and NBC. We bring broadcast-level storytelling to B2B brands who need to stand out in crowded markets.
+                </p>
+                {/* Credential Badges */}
+                <div className="flex flex-wrap gap-3 text-xs text-gray-500 uppercase tracking-widest">
+                  <span className="px-3 py-1 border border-gray-300">Emmy Award</span>
+                  <span className="px-3 py-1 border border-gray-300">CNN</span>
+                  <span className="px-3 py-1 border border-gray-300">Nat Geo</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Card 2: Documentary Craft */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative bg-white p-8 sm:p-10 md:p-12 group"
+            >
+              {/* Number Badge */}
+              <div className="absolute top-6 right-6 text-[120px] sm:text-[150px] font-light text-gray-100 leading-none -z-0">
+                02
+              </div>
+              {/* Image */}
+              <div className="relative h-[250px] mb-6 overflow-hidden">
+                <Image
+                  src="/images/hero/image4.jpg"
+                  alt="Documentary filmmaking craft GraphClic"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl sm:text-3xl font-light text-black mb-4 tracking-tight">
+                  Documentary Craft Meets Corporate Discipline
+                </h3>
+                <p className="text-gray-700 font-light leading-relaxed text-base sm:text-lg mb-6">
+                  We don&apos;t just execute your brief—we challenge it. Our documentary background means we find the authentic story, not the safe one. Then we deliver it on time and on budget.
+                </p>
+                {/* Credential Badges */}
+                <div className="flex flex-wrap gap-3 text-xs text-gray-500 uppercase tracking-widest">
+                  <span className="px-3 py-1 border border-gray-300">On Time</span>
+                  <span className="px-3 py-1 border border-gray-300">On Budget</span>
+                  <span className="px-3 py-1 border border-gray-300">Authentic</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Card 3: Cultural Intelligence */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="relative bg-white p-8 sm:p-10 md:p-12 group"
+            >
+              {/* Number Badge */}
+              <div className="absolute top-6 right-6 text-[120px] sm:text-[150px] font-light text-gray-100 leading-none -z-0">
+                03
+              </div>
+              {/* Image */}
+              <div className="relative h-[250px] mb-6 overflow-hidden">
+                <Image
+                  src="/images/hero/image5.jpg"
+                  alt="Global cultural storytelling GraphClic"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl sm:text-3xl font-light text-black mb-4 tracking-tight">
+                  Cultural Intelligence, Global Impact
+                </h3>
+                <p className="text-gray-700 font-light leading-relaxed text-base sm:text-lg mb-6">
+                  From boardrooms in Tysons to communities in East Africa, we tell stories that bridge cultures and drive measurable change. It&apos;s not just video. It&apos;s strategic communication.
+                </p>
+                {/* Credential Badges */}
+                <div className="flex flex-wrap gap-3 text-xs text-gray-500 uppercase tracking-widest">
+                  <span className="px-3 py-1 border border-gray-300">USA-Africa</span>
+                  <span className="px-3 py-1 border border-gray-300">Global Impact</span>
+                  <span className="px-3 py-1 border border-gray-300">Cultural Bridge</span>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
