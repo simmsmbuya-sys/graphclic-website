@@ -83,7 +83,7 @@ export default function HomePageClient() {
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.6 }}
                 className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-4xl mx-auto leading-[1.6] sm:leading-relaxed font-normal px-2 sm:px-3 mt-2 sm:mt-3"
               >
-                Leading B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services.
+                <strong className="font-bold text-white">GraphClic</strong> is the leading B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, scaleX: 0 }}

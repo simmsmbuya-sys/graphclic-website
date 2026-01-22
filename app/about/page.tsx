@@ -35,7 +35,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2 sm:mt-3"
           >
-            Two decades of experience. Two divisions. One mission: Tell stories that drive results.
+            <strong className="text-white font-bold">GraphClic</strong> brings two decades of experience. Two divisions. One mission: Tell stories that drive results.
           </motion.p>
         </div>
       </section>

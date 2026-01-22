@@ -170,7 +170,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "@id": "https://graphclic.com/#business",
               "name": "GraphClic",
-              "alternateName": ["Graphclic", "GraphClic Studios", "GraphClic Films"],
+              "alternateName": ["Graphclic", "GraphClic Studios", "GraphClic Films", "GraphClic Video Production", "GraphClic DMV"],
               "image": "https://graphclic.com/images/graphclic-logo.png",
               "description": "GraphClic - B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services.",
               "url": "https://graphclic.com",
@@ -217,7 +217,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "B2B Video Production",
-                      "description": "Corporate video production services for businesses in Washington DC, Maryland, and Virginia"
+                      "description": "GraphClic corporate video production services for businesses in Washington DC, Maryland, and Virginia"
                     }
                   },
                   {
@@ -225,11 +225,29 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Documentary Film Production",
-                      "description": "Documentary filmmaking services for social impact and cultural storytelling"
+                      "description": "GraphClic documentary filmmaking services for social impact and cultural storytelling"
                     }
                   }
                 ]
               }
+            })
+          }}
+        />
+        {/* Breadcrumb Schema for Homepage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "GraphClic",
+                  "item": "https://graphclic.com"
+                }
+              ]
             })
           }}
         />

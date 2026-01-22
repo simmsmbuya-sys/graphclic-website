@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Description */}
           <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Stories that drive business. Films that drive change. Crafting cinematic narratives that elevate brands and inspire action.
+            <strong className="text-white font-semibold">GraphClic</strong> - Stories that drive business. Films that drive change. Crafting cinematic narratives that elevate brands and inspire action.
           </p>
         </div>
       </div>
