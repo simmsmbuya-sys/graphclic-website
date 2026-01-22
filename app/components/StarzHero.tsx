@@ -227,9 +227,6 @@ export default function StarzHero() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.98 }}
                       className="px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border-2 border-white/30 text-white text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3"
-                      style={{
-                        textShadow: '0 2px 8px rgba(0,0,0,0.8)',
-                      }}
                     >
                       <Play size={20} fill="currentColor" />
                       {currentSlideData.secondaryButton.text}
