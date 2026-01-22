@@ -1,50 +1,11 @@
-import type { Metadata } from 'next';
-import AboutPageClient from './AboutPageClient';
+'use client';
 
-export const metadata: Metadata = {
-  title: "About GraphClic | Emmy-Award Winning Video Production Team DMV",
-  description: "30+ years combined experience in B2B video production and documentary filmmaking. Emmy-award winning team serving Washington DC, Maryland, Virginia.",
-  keywords: [
-    "About GraphClic",
-    "Emmy award winning video production",
-    "Video production team Washington DC",
-    "Documentary filmmakers DMV",
-    "B2B video production company",
-    "GraphClic Studios",
-    "GraphClic Films",
-    "Video production experience",
-    "Award winning video production DC"
-  ],
-  openGraph: {
-    title: "About GraphClic | Emmy-Award Winning Video Production Team DMV",
-    description: "30+ years combined experience in B2B video production and documentary filmmaking. Emmy-award winning team serving Washington DC, Maryland, Virginia.",
-    url: "https://graphclic.com/about",
-    siteName: "GraphClic",
-    type: "website",
-    images: [
-      {
-        url: "https://graphclic.com/images/graphclic-logo.png",
-        width: 1200,
-        height: 630,
-        alt: "GraphClic - Emmy-Award Winning Video Production Team",
-      },
-    ],
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About GraphClic | Emmy-Award Winning Video Production Team DMV",
-    description: "30+ years combined experience in B2B video production and documentary filmmaking.",
-    images: ["https://graphclic.com/images/graphclic-logo.png"],
-  },
-  alternates: {
-    canonical: "https://graphclic.com/about",
-  },
-};
+import { motion } from 'framer-motion';
+import { MapPin, Award, Users, Film, Briefcase, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Link from 'next/link';
 
-export default function AboutPage() {
-  return <AboutPageClient />;
-}
+export default function AboutPageClient() {
   return (
     <main className="min-h-screen bg-black">
       <Navigation />
@@ -149,7 +110,7 @@ export default function AboutPage() {
               With over 30 years of combined experience, our team has produced award-winning content for Fortune 500 companies, non-profits, foundations, and cultural institutions across the DMV region and beyond.
             </p>
             <p className="text-base sm:text-lg leading-[1.7] sm:leading-relaxed text-gray-700">
-              Today, we operate two distinct divisions—GraphClic Studios for strategic B2B video production and GraphClic Films for impact-driven documentary filmmaking—united by our commitment to storytelling excellence.
+              Today, we operate two distinct divisions—<Link href="/services" className="text-graphclic-red hover:underline font-semibold">GraphClic Studios</Link> for strategic B2B video production and <Link href="/services" className="text-graphclic-gold hover:underline font-semibold">GraphClic Films</Link> for impact-driven documentary filmmaking—united by our commitment to storytelling excellence.
             </p>
           </motion.div>
         </div>
@@ -176,13 +137,16 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="bg-gray-900 p-8 rounded-lg border border-gray-800"
             >
-              <Briefcase className="w-12 h-12 text-graphclic-red mb-4" />
-              <h3 className="text-2xl sm:text-3xl font-black text-graphclic-red mb-3 sm:mb-4">GraphClic Studios</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed text-sm sm:text-base">
-                Strategic B2B video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers.
+              <div className="flex items-center gap-3 mb-4">
+                <Briefcase className="text-graphclic-red" size={32} />
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">GraphClic Studios</h3>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Strategic B2B video production that drives measurable business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers.
               </p>
-              <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-red font-semibold hover:gap-3 transition-all">
-                Learn More <ArrowRight size={20} />
+              <Link href="/services" className="text-graphclic-red hover:text-graphclic-red-dark font-semibold inline-flex items-center gap-2">
+                Explore our B2B video production services
+                <ArrowRight size={18} />
               </Link>
             </motion.div>
 
@@ -194,13 +158,16 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="bg-gray-900 p-8 rounded-lg border border-gray-800"
             >
-              <Film className="w-12 h-12 text-graphclic-gold mb-4" />
-              <h3 className="text-2xl sm:text-3xl font-black text-graphclic-gold mb-3 sm:mb-4">GraphClic Films</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed text-sm sm:text-base">
-                Impact-driven documentary filmmaking that bridges cultures, amplifies underrepresented voices, and drives social change through authentic storytelling.
+              <div className="flex items-center gap-3 mb-4">
+                <Film className="text-graphclic-gold" size={32} />
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">GraphClic Films</h3>
+              </div>
+              <p className="text-gray-300 mb-4 leading-relaxed">
+                Impact-driven documentary filmmaking that bridges cultures, amplifies underrepresented voices, and drives social change. From USA-Africa partnerships to community narratives.
               </p>
-              <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-gold font-semibold hover:gap-3 transition-all">
-                Learn More <ArrowRight size={20} />
+              <Link href="/services" className="text-graphclic-gold hover:text-yellow-400 font-semibold inline-flex items-center gap-2">
+                View our documentary filmmaking services
+                <ArrowRight size={18} />
               </Link>
             </motion.div>
           </div>
@@ -208,38 +175,53 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-graphclic-red">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-[1.2] sm:leading-tight"
           >
-            Ready to Tell Your Story?
+            Ready to Work Together?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/90 mb-6"
+            transition={{ delay: 0.1 }}
+            className="text-lg sm:text-xl mb-8 sm:mb-10 text-gray-200"
           >
-            Whether it&apos;s corporate video or documentary film, let&apos;s bring your vision to life.
+            Explore our <Link href="/services" className="underline font-semibold hover:text-white">video production services</Link> or <Link href="/contact" className="underline font-semibold hover:text-white">get in touch</Link> to discuss your project.
           </motion.p>
-          <Link href="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-graphclic-red px-10 py-5 text-lg font-bold rounded-lg hover:bg-gray-100 transition-all"
-            >
-              Get In Touch
-            </motion.button>
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
+          >
+            <Link href="/services" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto bg-white text-graphclic-red hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg font-semibold transition-all shadow-lg min-h-[44px]"
+              >
+                View Our Services
+              </motion.button>
+            </Link>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto border-2 border-white hover:bg-white hover:text-graphclic-red px-8 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg font-semibold transition-all min-h-[44px]"
+              >
+                Get In Touch
+              </motion.button>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </main>
   );
 }
-

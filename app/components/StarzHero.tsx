@@ -127,7 +127,7 @@ export default function StarzHero() {
               {!imageErrors[currentSlide] ? (
                 <Image
                   src={currentSlideData.imageSrc}
-                  alt={`${currentSlideData.headline} - B2B video production Washington DC GraphClic`}
+                  alt={`${currentSlideData.headline} ${currentSlideData.subtitle} - B2B video production and documentary filmmaking Washington DC GraphClic`}
                   fill
                   className="object-cover"
                   sizes="100vw"

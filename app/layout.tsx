@@ -171,14 +171,14 @@ export default function RootLayout({
               "@id": "https://graphclic.com/#business",
               "name": "GraphClic",
               "alternateName": ["Graphclic", "GraphClic Studios", "GraphClic Films", "GraphClic Video Production", "GraphClic DMV"],
-              "image": "https://graphclic.com/images/graphclic-logo.png",
-              "description": "GraphClic - B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services.",
+              "image": "https://graphclic.com/images/hero/image1.jpg",
+              "description": "B2B video production and documentary filmmaking in Washington DC",
               "url": "https://graphclic.com",
               "telephone": "+1-202-000-0000",
               "email": "team@graphclicgroup.com",
               "address": {
                 "@type": "PostalAddress",
-                "addressLocality": "Washington DC",
+                "addressLocality": "Washington",
                 "addressRegion": "DC",
                 "addressCountry": "US"
               },
@@ -187,21 +187,9 @@ export default function RootLayout({
                 "latitude": 38.9072,
                 "longitude": -77.0369
               },
-              "areaServed": [
-                {
-                  "@type": "City",
-                  "name": "Washington DC"
-                },
-                {
-                  "@type": "State",
-                  "name": "Maryland"
-                },
-                {
-                  "@type": "State",
-                  "name": "Virginia"
-                }
-              ],
-              "priceRange": "$$",
+              "areaServed": ["Washington DC", "Maryland", "Virginia"],
+              "priceRange": "$$$",
+              "serviceType": ["B2B Video Production", "Documentary Filmmaking", "Corporate Video"],
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -224,7 +212,7 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Documentary Film Production",
+                      "name": "Documentary Filmmaking",
                       "description": "GraphClic documentary filmmaking services for social impact and cultural storytelling"
                     }
                   }

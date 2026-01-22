@@ -101,13 +101,18 @@ export default function ServicesPageClient() {
               </div>
 
               {/* Link */}
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 text-graphclic-red font-bold text-xl sm:text-2xl hover:gap-4 transition-all group"
-              >
-                Explore Services
-                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <div className="space-y-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 text-graphclic-red font-bold text-xl sm:text-2xl hover:gap-4 transition-all group"
+                >
+                  Explore Services
+                  <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <p className="text-sm text-gray-600">
+                  Or <Link href="/" className="text-graphclic-red hover:underline font-semibold">return to homepage</Link> to learn more about GraphClic.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -164,13 +169,18 @@ export default function ServicesPageClient() {
               </div>
 
               {/* Link */}
-              <Link
-                href="/our-work"
-                className="inline-flex items-center gap-3 text-graphclic-gold font-bold text-xl sm:text-2xl hover:gap-4 transition-all group"
-              >
-                View Work
-                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <div className="space-y-3">
+                <Link
+                  href="/our-work"
+                  className="inline-flex items-center gap-3 text-graphclic-gold font-bold text-xl sm:text-2xl hover:gap-4 transition-all group"
+                >
+                  View Work
+                  <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <p className="text-sm text-gray-600">
+                  See our <Link href="/about" className="text-graphclic-gold hover:underline font-semibold">award-winning team</Link> and <Link href="/" className="text-graphclic-gold hover:underline font-semibold">company story</Link>.
+                </p>
+              </div>
             </motion.div>
 
             {/* RIGHT: Large Image - On top for mobile */}
@@ -183,7 +193,7 @@ export default function ServicesPageClient() {
             >
               <Image
                 src="/images/services/image7.jpg"
-                alt="Documentary filming Washington DC GraphClic Films"
+                alt="Documentary filmmaking team on set Washington DC GraphClic Films"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
