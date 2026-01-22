@@ -87,8 +87,11 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add your verification codes here when you have them
-    // google: "your-google-verification-code",
+    // Google Search Console verification
+    // Get your code from: https://search.google.com/search-console
+    // After adding property, choose HTML tag method and copy the content value
+    // Example: google: "ABC123XYZ789..."
+    // google: "PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE",
     // yandex: "your-yandex-verification-code",
     // bing: "your-bing-verification-code",
   },
