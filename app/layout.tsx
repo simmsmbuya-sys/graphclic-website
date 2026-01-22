@@ -91,13 +91,7 @@ export const metadata: Metadata = {
     nositelinkssearchbox: false,
   },
   verification: {
-    // Google Search Console verification
-    // Get your code from: https://search.google.com/search-console
-    // After adding property, choose HTML tag method and copy the content value
-    // Example: google: "ABC123XYZ789..."
-    // google: "PASTE_YOUR_GOOGLE_VERIFICATION_CODE_HERE",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
+    google: "Y3J8nvhAM67NMf00V_l4Lt6ldXeVgSObfTmdE-BzH4I",
   },
   alternates: {
     canonical: "https://graphclic.com",
