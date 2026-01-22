@@ -30,6 +30,8 @@ export default function HomePageClient() {
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
+      {/* Hidden H1 for SEO - GraphClic brand name */}
+      <h1 className="sr-only">GraphClic - B2B Video Production & Documentary Films Washington DC</h1>
       <StarzHero />
 
       {/* Why GraphClic Section */}
