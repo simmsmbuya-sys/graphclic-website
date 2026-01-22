@@ -62,10 +62,6 @@ export default function ServicesPageClient() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="space-y-8 order-1 lg:order-2"
             >
-              <div className="text-sm uppercase text-gray-600 tracking-wider mb-6 font-semibold">
-                01 — CORPORATE
-              </div>
-              
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight">
                 GraphClic Studios
               </h2>
@@ -129,10 +125,6 @@ export default function ServicesPageClient() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="space-y-8 order-1"
             >
-              <div className="text-sm uppercase text-gray-600 tracking-wider mb-6 font-semibold">
-                02 — DOCUMENTARY
-              </div>
-              
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-4 sm:mb-6 tracking-tight">
                 GraphClic Films
               </h2>
