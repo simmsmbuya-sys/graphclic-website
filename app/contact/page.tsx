@@ -90,7 +90,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              Let's Tell Your Story
+              Let&apos;s Tell Your Story
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto"
             >
-              Ready to create compelling video content that drives results? Let's discuss your project.
+              Ready to create compelling video content that drives results? Let&apos;s discuss your project.
             </motion.p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function ContactPage() {
               >
                 <h2 className="text-4xl font-bold mb-8 text-graphclic-black">Get in Touch</h2>
                 <p className="text-lg text-graphclic-grey mb-10">
-                  Whether you need corporate video production or impact documentary filmmaking, we're here to help bring your vision to life.
+                  Whether you need corporate video production or impact documentary filmmaking, we&apos;re here to help bring your vision to life.
                 </p>
 
                 {/* Contact Details */}
@@ -198,7 +198,7 @@ export default function ContactPage() {
                     <CheckCircle className="text-green-600" size={20} />
                     <div>
                       <p className="text-green-800 font-semibold">Thank you for your message!</p>
-                      <p className="text-green-700 text-sm mt-1">Your email client should open shortly. If it doesn't, please email us directly at team@graphclicgroup.com</p>
+                      <p className="text-green-700 text-sm mt-1">Your email client should open shortly. If it doesn&apos;t, please email us directly at team@graphclicgroup.com</p>
                     </div>
                   </motion.div>
                 )}

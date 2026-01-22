@@ -47,18 +47,10 @@ export default function HeroSlideshow({
     setImageError(false);
   }, [currentIndex]);
 
-  if (images.length === 0) {
-    return (
-      <div className="absolute inset-0 w-full h-full bg-black z-0">
-        {/* Fallback dark background */}
-      </div>
-    );
-  }
-
-  const currentImage = images[currentIndex];
-
-  // Debug logging - Detailed
+  // Debug logging - Detailed (moved before early return to fix React Hooks rules)
   useEffect(() => {
+    if (images.length === 0) return;
+    const currentImage = images[currentIndex];
     console.log('🎬 ===== HeroSlideshow Debug Info =====');
     console.log('📦 Images array:', images);
     console.log('📦 Images count:', images.length);
@@ -68,13 +60,23 @@ export default function HeroSlideshow({
     console.log('📸 Full image path:', currentImage ? `/images/hero/${currentImage.src.split('/').pop()}` : 'N/A');
     console.log('🔍 Testing image path:', currentImage?.src);
     console.log('====================================');
-  }, [images.length, currentIndex, currentImage, images]);
+  }, [images, currentIndex]);
 
   // Verify component is rendering
   useEffect(() => {
     console.log('🎭 HeroSlideshow component rendered!');
     console.log('🎭 Is component mounted?', true);
   }, []);
+
+  if (images.length === 0) {
+    return (
+      <div className="absolute inset-0 w-full h-full bg-black z-0">
+        {/* Fallback dark background */}
+      </div>
+    );
+  }
+
+  const currentImage = images[currentIndex];
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden z-0">

@@ -110,7 +110,7 @@ export default function AboutPage() {
             className="prose prose-lg max-w-none text-gray-700"
           >
             <p className="text-lg leading-relaxed mb-6">
-              GraphClic was founded on a simple belief: every story deserves to be told with cinematic excellence, whether it's driving business results or inspiring social change.
+              GraphClic was founded on a simple belief: every story deserves to be told with cinematic excellence, whether it&apos;s driving business results or inspiring social change.
             </p>
             <p className="text-lg leading-relaxed mb-6">
               With over 30 years of combined experience, our team has produced award-winning content for Fortune 500 companies, non-profits, foundations, and cultural institutions across the DMV region and beyond.
@@ -193,7 +193,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90 mb-8"
           >
-            Whether it's corporate video or documentary film, let's bring your vision to life.
+            Whether it&apos;s corporate video or documentary film, let&apos;s bring your vision to life.
           </motion.p>
           <Link href="/contact">
             <motion.button

@@ -511,7 +511,7 @@ export default function OurWorkPage() {
               transition={{ delay: 0.1 }}
               className="text-xl mb-10 text-gray-200"
             >
-              Let's discuss how video can drive your business forward or bring your documentary vision to life.
+              Let&apos;s discuss how video can drive your business forward or bring your documentary vision to life.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
