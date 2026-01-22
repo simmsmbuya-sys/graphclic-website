@@ -2,9 +2,17 @@ import type { Metadata } from 'next';
 import HomePageClient from './components/HomePageClient';
 
 export const metadata: Metadata = {
-  title: "B2B Video Production DC | Corporate Video DMV | GraphClic Studios",
-  description: "Leading B2B video production company in Washington DC, Maryland & Virginia. Corporate videos, documentaries, testimonials. GraphClic serves DMV businesses.",
+  title: "GraphClic | B2B Video Production DC | Corporate Video DMV | Washington DC",
+  description: "GraphClic - Leading B2B video production company in Washington DC, Maryland & Virginia. Corporate videos, documentaries, testimonials. GraphClic serves DMV businesses.",
   keywords: [
+    "GraphClic",
+    "Graphclic",
+    "graphclic",
+    "GraphClic Studios",
+    "GraphClic Films",
+    "GraphClic video production",
+    "GraphClic Washington DC",
+    "GraphClic DMV",
     "B2B video production DC",
     "Corporate video production DMV",
     "Video production Washington DC",
@@ -18,8 +26,8 @@ export const metadata: Metadata = {
     "Customer testimonial video services"
   ],
   openGraph: {
-    title: "B2B Video Production DC | Corporate Video DMV | GraphClic Studios",
-    description: "Leading B2B video production company in Washington DC, Maryland & Virginia. Corporate videos, documentaries, testimonials.",
+    title: "GraphClic | B2B Video Production DC | Corporate Video DMV | Washington DC",
+    description: "GraphClic - Leading B2B video production company in Washington DC, Maryland & Virginia. Corporate videos, documentaries, testimonials.",
     url: "https://graphclic.com",
     siteName: "GraphClic",
     images: [
@@ -35,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "B2B Video Production DC | Corporate Video DMV | GraphClic Studios",
-    description: "Leading B2B video production company in Washington DC, Maryland & Virginia.",
+    title: "GraphClic | B2B Video Production DC | Corporate Video DMV | Washington DC",
+    description: "GraphClic - Leading B2B video production company in Washington DC, Maryland & Virginia.",
     images: ["/images/graphclic-logo.png"],
   },
   alternates: {

@@ -33,7 +33,7 @@ export default function HomePageClient() {
       <StarzHero />
 
       {/* Why GraphClic Section */}
-      <section className="relative h-screen w-full overflow-hidden group why-graphclic">
+      <section className="relative min-h-[85vh] sm:h-screen w-full overflow-hidden group why-graphclic">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 w-full h-full image-container" style={{ transform: 'scale(1.05)' }}>
             <div className="absolute inset-0 w-full h-full image-wrapper">
@@ -56,30 +56,30 @@ export default function HomePageClient() {
           />
         </div>
 
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="max-w-6xl mx-auto px-2 sm:px-3 lg:px-8 text-center">
+        <div className="relative z-10 min-h-[85vh] sm:h-full flex items-center justify-center py-12 sm:py-0">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-              className="space-y-4 md:space-y-6"
+              className="space-y-2 sm:space-y-3 md:space-y-4"
             >
-              <motion.h1
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
-                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] sm:leading-tight tracking-tight px-2"
+                className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.15] sm:leading-[1.1] tracking-tight px-2"
               >
                 B2B Video Production & Documentary Films in Washington DC
-              </motion.h1>
+              </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.6 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 max-w-4xl mx-auto leading-[1.6] sm:leading-relaxed font-normal px-3 sm:px-4 mt-3 sm:mt-4"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-4xl mx-auto leading-[1.6] sm:leading-relaxed font-normal px-2 sm:px-3 mt-2 sm:mt-3"
               >
                 Leading B2B video production DC company specializing in corporate video marketing DMV, brand storytelling video production, SaaS product video production, and customer testimonial video services.
               </motion.p>
@@ -88,9 +88,9 @@ export default function HomePageClient() {
                 whileInView={{ opacity: 1, scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.8 }}
-                className="flex justify-center pt-4"
+                className="flex justify-center pt-2 sm:pt-3"
               >
-                <div className="w-24 h-1 bg-graphclic-gold"></div>
+                <div className="w-20 sm:w-24 h-1 bg-graphclic-gold"></div>
               </motion.div>
             </motion.div>
           </div>
@@ -130,7 +130,7 @@ export default function HomePageClient() {
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
               className="space-y-4 md:space-y-6"
             >
-              <motion.h2
+              <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -138,7 +138,7 @@ export default function HomePageClient() {
                 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.1] sm:leading-tight tracking-tight px-2 sm:px-4"
               >
                 Ready to Tell Your Story?
-              </motion.h2>
+              </motion.h3>
               <motion.div
                 initial={{ opacity: 0, scaleX: 0 }}
                 whileInView={{ opacity: 1, scaleX: 1 }}
