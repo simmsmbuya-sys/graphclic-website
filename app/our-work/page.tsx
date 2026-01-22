@@ -412,7 +412,7 @@ export default function OurWorkPage() {
 
             <div
               ref={documentaryRef}
-              className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-3 sm:px-4 lg:px-8 pb-3"
+              className="flex gap-2 sm:gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-2 sm:px-3 lg:px-8 pb-2"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               onScroll={checkDocumentaryScroll}
             >
