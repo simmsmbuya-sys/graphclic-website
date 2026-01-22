@@ -81,14 +81,14 @@ export default function ContactPage() {
       <Navigation />
       <main className="min-h-screen bg-graphclic-light">
         {/* Hero Section */}
-        <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-graphclic-red text-white overflow-hidden">
+        <section className="relative min-h-[40vh] sm:min-h-[50vh] md:h-[50vh] md:min-h-[400px] flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-graphclic-red text-white overflow-hidden pt-16 sm:pt-20">
           <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center py-12 sm:py-16">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-5 leading-[1.1] sm:leading-tight px-2 sm:px-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.15] md:leading-tight px-2 sm:px-4"
             >
               Let&apos;s Tell Your Story
             </motion.h1>
@@ -96,7 +96,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2 sm:mt-3"
+              className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-200 max-w-3xl mx-auto px-4 sm:px-6 leading-[1.7] sm:leading-relaxed mt-4 sm:mt-5"
             >
               Ready to create compelling video content that drives results? Let&apos;s discuss your project.
             </motion.p>
@@ -104,9 +104,9 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-3 sm:px-4">
-            <div className="grid lg:grid-cols-2 gap-4 md:gap-6">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
               {/* Contact Information */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -185,7 +185,7 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-10 rounded-2xl shadow-2xl border-2 border-gray-200"
+                className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl border-2 border-gray-200"
               >
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-5 text-graphclic-black px-2 sm:px-4 leading-[1.2] sm:leading-tight">Send Us a Message</h2>
                 
@@ -347,13 +347,13 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+        <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-4"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-[1.2] sm:leading-tight"
             >
               Ready to Get In Touch?
             </motion.h2>
@@ -362,7 +362,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl mb-6 text-gray-200"
+              className="text-lg sm:text-xl mb-8 sm:mb-10 text-gray-200"
             >
               Explore our work or learn more about our services
             </motion.p>
@@ -371,22 +371,22 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center"
             >
-              <Link href="/our-work" passHref>
+              <Link href="/our-work" className="w-full sm:w-auto">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-white text-graphclic-red hover:bg-gray-100 px-10 py-5 rounded-lg text-lg font-semibold transition-all shadow-lg"
+                  className="w-full sm:w-auto bg-white text-graphclic-red hover:bg-gray-100 px-8 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg font-semibold transition-all shadow-lg min-h-[44px]"
                 >
                   View Our Work
                 </motion.button>
               </Link>
-              <Link href="/services" passHref>
+              <Link href="/services" className="w-full sm:w-auto">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="border-2 border-white hover:bg-white hover:text-graphclic-red px-10 py-5 rounded-lg text-lg font-semibold transition-all"
+                  className="w-full sm:w-auto border-2 border-white hover:bg-white hover:text-graphclic-red px-8 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg font-semibold transition-all min-h-[44px]"
                 >
                   Explore Services
                 </motion.button>

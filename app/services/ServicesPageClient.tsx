@@ -31,22 +31,22 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CARD 1 - GraphClic Studios */}
-      <section className="relative py-6 md:py-8 lg:py-12">
-        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
-            {/* LEFT: Large Image */}
+      <section className="relative py-8 sm:py-10 md:py-12 lg:py-16">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            {/* LEFT: Large Image - On top for mobile */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1"
+              className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-1"
             >
               <Image
                 src="/images/hero/image3.jpg"
                 alt="B2B video production equipment GraphClic Studios Washington DC"
                 fill
-                className="object-contain sm:object-cover object-center"
+                className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -60,7 +60,7 @@ export default function ServicesPageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="space-y-3 order-1 lg:order-2"
+              className="space-y-4 sm:space-y-5 order-2 lg:order-2 px-4 sm:px-6 lg:px-8"
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-2 sm:mb-3 tracking-tight leading-[1.1] sm:leading-tight">
                 GraphClic Studios
@@ -75,7 +75,7 @@ export default function ServicesPageClient() {
               </p>
 
               {/* Services List */}
-              <div className="space-y-1.5 mb-4">
+              <div className="space-y-2 sm:space-y-2.5 mb-6 sm:mb-8">
                 {[
                   'Brand Storytelling',
                   'Product Demonstrations',
@@ -92,10 +92,10 @@ export default function ServicesPageClient() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                    className="flex items-center gap-3 py-2"
+                    className="flex items-start gap-3 py-2"
                   >
-                    <span className="text-graphclic-red text-lg font-bold">—</span>
-                    <span className="text-lg sm:text-xl text-gray-900 font-semibold">{service}</span>
+                    <span className="text-graphclic-red text-lg sm:text-xl font-bold mt-1">—</span>
+                    <span className="text-base sm:text-lg md:text-xl text-gray-900 font-semibold leading-relaxed">{service}</span>
                   </motion.div>
                 ))}
               </div>
@@ -114,16 +114,16 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CARD 2 - GraphClic Films (REVERSED) */}
-      <section className="relative py-6 md:py-8 lg:py-12 bg-gray-50">
-        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
+      <section className="relative py-8 sm:py-10 md:py-12 lg:py-16 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             {/* LEFT: Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-3 order-1"
+              className="space-y-4 sm:space-y-5 order-1 px-4 sm:px-6 lg:px-8"
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-2 sm:mb-3 tracking-tight leading-[1.1] sm:leading-tight">
                 GraphClic Films
@@ -138,7 +138,7 @@ export default function ServicesPageClient() {
               </p>
 
               {/* Services List */}
-              <div className="space-y-1.5 mb-4">
+              <div className="space-y-2 sm:space-y-2.5 mb-6 sm:mb-8">
                 {[
                   'Social Impact Documentaries',
                   'USA-Africa Partnership Stories',
@@ -155,10 +155,10 @@ export default function ServicesPageClient() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                    className="flex items-center gap-3 py-2"
+                    className="flex items-start gap-3 py-2"
                   >
-                    <span className="text-graphclic-gold text-lg font-bold">—</span>
-                    <span className="text-lg sm:text-xl text-gray-900 font-semibold">{service}</span>
+                    <span className="text-graphclic-gold text-lg sm:text-xl font-bold mt-1">—</span>
+                    <span className="text-base sm:text-lg md:text-xl text-gray-900 font-semibold leading-relaxed">{service}</span>
                   </motion.div>
                 ))}
               </div>
@@ -173,19 +173,19 @@ export default function ServicesPageClient() {
               </Link>
             </motion.div>
 
-            {/* RIGHT: Large Image */}
+            {/* RIGHT: Large Image - On top for mobile */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2"
+              className="relative h-[300px] sm:h-[400px] md:h-[450px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-2"
             >
               <Image
                 src="/images/services/image7.jpg"
                 alt="Documentary filming Washington DC GraphClic Films"
                 fill
-                className="object-contain sm:object-cover object-center"
+                className="object-cover object-center"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
               />
               {/* Subtle overlay for depth */}
@@ -196,21 +196,21 @@ export default function ServicesPageClient() {
       </section>
 
       {/* PROCESS/APPROACH SECTION */}
-      <section className="relative bg-white py-8 md:py-12 lg:py-16">
-        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
+      <section className="relative bg-white py-10 sm:py-12 md:py-16 lg:py-20">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="mb-6 md:mb-8"
+            className="mb-8 sm:mb-10 md:mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-3 sm:mb-4 tracking-tight text-center px-2 sm:px-3 leading-[1.1] sm:leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-4 sm:mb-5 md:mb-6 tracking-tight text-center leading-[1.2] sm:leading-[1.1]">
               Our Approach
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10">
             {[
               { 
                 number: '01',
@@ -239,12 +239,12 @@ export default function ServicesPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
-                className="space-y-4 p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                className="space-y-4 sm:space-y-5 p-6 sm:p-8 rounded-lg hover:bg-gray-50 transition-colors duration-300"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-300 mb-3 sm:mb-4">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-light text-gray-300 mb-4 sm:mb-5">
                   {principle.number}
                 </div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-graphclic-red mb-3 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-graphclic-red mb-4 sm:mb-5 leading-tight">
                   {principle.title}
                 </h3>
                 <p className="text-base sm:text-lg text-gray-800 leading-relaxed font-medium">
@@ -257,22 +257,23 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative bg-black py-8 md:py-12 lg:py-16">
-        <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8 text-center">
+      <section className="relative bg-black py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="space-y-4"
+            className="space-y-6 sm:space-y-8"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-3 sm:mb-4 tracking-tight px-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight leading-[1.2] sm:leading-[1.1]">
               Let&apos;s Create Together
             </h2>
-            <Link href="/contact">
+            <Link href="/contact" className="inline-block">
               <motion.button
                 whileHover={{ filter: 'brightness(1.1)' }}
-                className="bg-gradient-to-r from-graphclic-red to-graphclic-red-dark text-white px-10 md:px-12 py-5 md:py-6 text-lg md:text-xl font-medium rounded-lg transition-all shadow-lg hover:shadow-xl"
+                whileTap={{ scale: 0.98 }}
+                className="bg-gradient-to-r from-graphclic-red to-graphclic-red-dark text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 text-base sm:text-lg md:text-xl font-medium rounded-lg transition-all shadow-lg hover:shadow-xl min-h-[44px] w-full sm:w-auto"
               >
                 Get Started
               </motion.button>

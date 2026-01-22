@@ -160,7 +160,7 @@ export default function StarzHero() {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-center pt-16 sm:pt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
             <AnimatePresence mode="wait">
@@ -170,14 +170,14 @@ export default function StarzHero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
                 {/* Headline */}
                 <motion.h1
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-white px-2 sm:px-4"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.15] sm:leading-[1.1] text-white px-4 sm:px-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
                 >
                   {currentSlideData.headline}
                 </motion.h1>
@@ -187,7 +187,7 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-graphclic-gold px-2 sm:px-4"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.15] sm:leading-[1.1] text-graphclic-gold px-4 sm:px-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
                 >
                   {currentSlideData.subtitle}
                 </motion.h2>
@@ -197,7 +197,7 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-3 sm:mt-4 px-3 sm:px-4 leading-[1.6] sm:leading-relaxed"
+                  className="text-lg sm:text-xl md:text-xl text-white/95 max-w-2xl mt-4 sm:mt-6 px-4 sm:px-6 leading-[1.7] sm:leading-relaxed font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                 >
                   {currentSlideData.description}
                 </motion.p>
@@ -207,14 +207,14 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="flex flex-col sm:flex-row gap-4 mt-8"
+                  className="flex flex-col gap-4 mt-6 sm:mt-8 px-4 sm:px-6"
                 >
                   {/* Primary Button - Red */}
-                  <Link href={currentSlideData.primaryButton.href || '#'} passHref>
+                  <Link href={currentSlideData.primaryButton.href || '#'} className="w-full sm:w-auto">
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 bg-graphclic-red hover:bg-graphclic-red-dark text-white text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(153,27,30,0.5)] hover:shadow-[0_6px_30px_rgba(153,27,30,0.7)]"
+                      className="w-full sm:w-auto px-8 py-4 sm:py-4 bg-graphclic-red hover:bg-graphclic-red-dark text-white text-base sm:text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(153,27,30,0.5)] hover:shadow-[0_6px_30px_rgba(153,27,30,0.7)] min-h-[44px]"
                     >
                       {currentSlideData.primaryButton.text}
                       <ArrowRight size={20} />
@@ -222,11 +222,11 @@ export default function StarzHero() {
                   </Link>
 
                   {/* Secondary Button - Glass morphism */}
-                  <Link href={currentSlideData.secondaryButton.href || '#'} passHref>
+                  <Link href={currentSlideData.secondaryButton.href || '#'} className="w-full sm:w-auto">
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border-2 border-white/30 text-white text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3"
+                      className="w-full sm:w-auto px-8 py-4 sm:py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 border-2 border-white/30 text-white text-base sm:text-lg font-semibold rounded-lg transition-all flex items-center justify-center gap-3 min-h-[44px]"
                     >
                       <Play size={20} fill="currentColor" />
                       {currentSlideData.secondaryButton.text}
@@ -268,27 +268,27 @@ export default function StarzHero() {
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-2 sm:gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`h-2 sm:h-3 rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center ${
               index === currentSlide
-                ? 'bg-[#FFD700] scale-125 w-8'
-                : 'bg-white/40 hover:bg-white/60'
+                ? 'bg-[#FFD700] scale-125 w-8 sm:w-8'
+                : 'bg-white/40 hover:bg-white/60 w-2 sm:w-3'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Scroll Indicator - Bottom Left */}
+      {/* Scroll Indicator - Bottom Left - Hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-10 left-8 z-30"
+        className="hidden sm:block absolute bottom-10 left-8 z-30"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

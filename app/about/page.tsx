@@ -11,19 +11,19 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] sm:min-h-[60vh] md:h-[60vh] md:min-h-[500px] flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-graphclic-red/20" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12 sm:py-16">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-white mb-3 sm:mb-5 px-2 sm:px-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.2] sm:leading-[1.15] md:leading-tight text-white mb-4 sm:mb-6 px-2 sm:px-4"
           >
             Where Strategic Vision
             <br />
@@ -33,7 +33,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2 sm:mt-3"
+            className="text-base sm:text-lg md:text-xl lg:text-xl text-white/90 max-w-3xl mx-auto px-4 sm:px-6 leading-[1.7] sm:leading-relaxed mt-4 sm:mt-5"
           >
             <strong className="text-white font-bold">GraphClic</strong> brings two decades of experience. Two divisions. One mission: Tell stories that drive results.
           </motion.p>
@@ -41,9 +41,9 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-graphclic-red-dark py-8 md:py-10 border-y border-gray-800">
+      <section className="bg-graphclic-red-dark py-8 sm:py-10 md:py-12 border-y border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -85,8 +85,8 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,18 +117,18 @@ export default function AboutPage() {
       </section>
 
       {/* Two Divisions Section */}
-      <section className="py-12 md:py-16 bg-black">
+      <section className="py-12 sm:py-16 md:py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5 sm:mb-8 text-center px-3 sm:px-4 leading-[1.2] sm:leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-8 sm:mb-10 md:mb-12 text-center leading-[1.2] sm:leading-tight"
           >
             Two Divisions. One Mission.
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
             {/* GraphClic Studios */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
