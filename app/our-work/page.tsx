@@ -219,7 +219,7 @@ export default function OurWorkPage() {
             <img
               src="/images/hero/image1.jpg"
               alt={`${featuredProject.title} - ${featuredProject.category} video production Washington DC GraphClic`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain sm:object-cover"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = getThumbnailUrl(featuredProject.videoId);
@@ -316,7 +316,7 @@ export default function OurWorkPage() {
 
             <div
               ref={corporateRef}
-              className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-4 sm:px-6 lg:px-8 pb-4"
+              className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-3 sm:px-4 lg:px-8 pb-3"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               onScroll={checkCorporateScroll}
             >
@@ -412,7 +412,7 @@ export default function OurWorkPage() {
 
             <div
               ref={documentaryRef}
-              className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-4 sm:px-6 lg:px-8 pb-4"
+              className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-3 sm:px-4 lg:px-8 pb-3"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               onScroll={checkDocumentaryScroll}
             >

@@ -92,7 +92,7 @@ export default function AboutPage() {
 
       {/* Our Story Section */}
       <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export default function AboutPage() {
           >
             Two Divisions. One Mission.
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {/* GraphClic Studios */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}

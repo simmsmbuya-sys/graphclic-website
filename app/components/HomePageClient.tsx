@@ -42,7 +42,7 @@ export default function HomePageClient() {
                 alt="B2B video production equipment GraphClic Washington DC"
                 fill
                 priority
-                className="object-cover object-center"
+                className="object-contain sm:object-cover object-center"
                 quality={90}
                 sizes="100vw"
               />
@@ -57,7 +57,7 @@ export default function HomePageClient() {
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-6xl mx-auto px-2 sm:px-3 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function HomePageClient() {
                 alt="Corporate video production studio GraphClic DMV"
                 fill
                 priority
-                className="object-cover object-center"
+                className="object-contain sm:object-cover object-center"
                 quality={90}
                 sizes="100vw"
               />
@@ -121,8 +121,8 @@ export default function HomePageClient() {
           />
         </div>
 
-        <div className="relative z-10 h-full flex items-start justify-center pt-24 md:pt-32 lg:pt-40">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 h-full flex items-start justify-center pt-12 md:pt-16 lg:pt-20">
+          <div className="max-w-6xl mx-auto px-2 sm:px-3 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

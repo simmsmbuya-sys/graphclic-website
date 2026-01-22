@@ -105,8 +105,8 @@ export default function ContactPage() {
 
         {/* Contact Section */}
         <section className="py-12 md:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
+          <div className="max-w-7xl mx-auto px-3 sm:px-4">
+            <div className="grid lg:grid-cols-2 gap-4 md:gap-6">
               {/* Contact Information */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}

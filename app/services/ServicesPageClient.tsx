@@ -31,23 +31,23 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CARD 1 - GraphClic Studios */}
-      <section className="relative py-10 md:py-12 lg:py-16">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+      <section className="relative py-6 md:py-8 lg:py-12">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
             {/* LEFT: Large Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1"
+              className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2 lg:order-1"
             >
               <Image
                 src="/images/hero/image3.jpg"
                 alt="B2B video production equipment GraphClic Studios Washington DC"
                 fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain sm:object-cover object-center"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Subtle overlay for depth */}
@@ -60,22 +60,22 @@ export default function ServicesPageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="space-y-5 order-1 lg:order-2"
+              className="space-y-3 order-1 lg:order-2"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-2 sm:mb-3 tracking-tight">
                 GraphClic Studios
               </h2>
               
-              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-red/90 mb-4 sm:mb-5 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-red/90 mb-2 sm:mb-3 font-bold">
                 B2B Video Production
               </h3>
               
-              <p className="text-lg sm:text-xl text-gray-800 mb-6 leading-relaxed max-w-[600px] font-medium">
+              <p className="text-lg sm:text-xl text-gray-800 mb-4 leading-relaxed max-w-[600px] font-medium">
                 Strategic video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers. Every frame is crafted with your business goals in mind.
               </p>
 
               {/* Services List */}
-              <div className="space-y-2 mb-6">
+              <div className="space-y-1.5 mb-4">
                 {[
                   'Brand Storytelling',
                   'Product Demonstrations',
@@ -114,31 +114,31 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CARD 2 - GraphClic Films (REVERSED) */}
-      <section className="relative py-10 md:py-12 lg:py-16 bg-gray-50">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+      <section className="relative py-6 md:py-8 lg:py-12 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
             {/* LEFT: Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-5 order-1"
+              className="space-y-3 order-1"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-4 sm:mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-2 sm:mb-3 tracking-tight">
                 GraphClic Films
               </h2>
               
-              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-gold/90 mb-4 sm:mb-5 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-gold/90 mb-2 sm:mb-3 font-bold">
                 Impact-Driven Documentary Filmmaking
               </h3>
               
-              <p className="text-lg sm:text-xl text-gray-800 mb-6 leading-relaxed max-w-[600px] font-medium">
+              <p className="text-lg sm:text-xl text-gray-800 mb-4 leading-relaxed max-w-[600px] font-medium">
                 We tell authentic stories that bridge cultures, amplify underrepresented voices, and drive social impact. From USA-Africa partnerships to community narratives, our documentaries inspire action and create lasting change.
               </p>
 
               {/* Services List */}
-              <div className="space-y-2 mb-6">
+              <div className="space-y-1.5 mb-4">
                 {[
                   'Social Impact Documentaries',
                   'USA-Africa Partnership Stories',
@@ -179,14 +179,14 @@ export default function ServicesPageClient() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2"
+              className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl order-2"
             >
               <Image
                 src="/images/services/image7.jpg"
                 alt="Documentary filming Washington DC GraphClic Films"
                 fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain sm:object-cover object-center"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
               />
               {/* Subtle overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -196,21 +196,21 @@ export default function ServicesPageClient() {
       </section>
 
       {/* PROCESS/APPROACH SECTION */}
-      <section className="relative bg-white py-12 md:py-16 lg:py-20">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-white py-8 md:py-12 lg:py-16">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="mb-10 md:mb-12"
+            className="mb-6 md:mb-8"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight text-center px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-3 sm:mb-4 tracking-tight text-center px-3">
               Our Approach
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { 
                 number: '01',
@@ -257,16 +257,16 @@ export default function ServicesPageClient() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative bg-black py-12 md:py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative bg-black py-8 md:py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-4 sm:mb-6 tracking-tight px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white mb-3 sm:mb-4 tracking-tight px-3">
               Let&apos;s Create Together
             </h2>
             <Link href="/contact">
