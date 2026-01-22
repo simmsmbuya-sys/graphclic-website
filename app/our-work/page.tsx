@@ -277,8 +277,8 @@ export default function OurWorkPage() {
         </section>
 
         {/* Corporate Projects Row - Apple TV Style */}
-        <section className="py-8 md:py-10 bg-black">
-          <div className="mb-4 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 md:py-8 bg-black">
+          <div className="mb-3 px-2 sm:px-3 lg:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Corporate</h2>
             <p className="text-gray-400">B2B video production for brands</p>
           </div>
@@ -316,7 +316,7 @@ export default function OurWorkPage() {
 
             <div
               ref={corporateRef}
-              className="flex gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-3 sm:px-4 lg:px-8 pb-3"
+              className="flex gap-2 sm:gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-2 sm:px-3 lg:px-8 pb-2"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               onScroll={checkCorporateScroll}
             >
@@ -373,8 +373,8 @@ export default function OurWorkPage() {
         </section>
 
         {/* Documentary Projects Row - Apple TV Style */}
-        <section className="py-8 md:py-10 bg-black">
-          <div className="mb-4 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 md:py-8 bg-black">
+          <div className="mb-3 px-2 sm:px-3 lg:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Documentary</h2>
             <p className="text-gray-400">Impact documentaries that drive change</p>
           </div>
