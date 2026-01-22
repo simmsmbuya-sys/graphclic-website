@@ -11,7 +11,7 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-graphclic-red/20" />
@@ -47,7 +47,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-graphclic-red-dark py-12 border-y border-gray-800">
+      <section className="bg-graphclic-red-dark py-8 md:py-10 border-y border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
@@ -91,14 +91,14 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-6 sm:mb-8 text-center px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 text-center px-4"
           >
             Our Story
           </motion.h2>
@@ -109,10 +109,10 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="prose prose-lg max-w-none text-gray-700"
           >
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-4">
               GraphClic was founded on a simple belief: every story deserves to be told with cinematic excellence, whether it&apos;s driving business results or inspiring social change.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-4">
               With over 30 years of combined experience, our team has produced award-winning content for Fortune 500 companies, non-profits, foundations, and cultural institutions across the DMV region and beyond.
             </p>
             <p className="text-lg leading-relaxed">
@@ -123,18 +123,18 @@ export default function AboutPage() {
       </section>
 
       {/* Two Divisions Section */}
-      <section className="py-24 bg-black">
+      <section className="py-12 md:py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-12 sm:mb-16 text-center px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-8 sm:mb-10 text-center px-4"
           >
             Two Divisions. One Mission.
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
             {/* GraphClic Studios */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -145,7 +145,7 @@ export default function AboutPage() {
             >
               <Briefcase className="w-12 h-12 text-graphclic-red mb-4" />
               <h3 className="text-2xl sm:text-3xl font-black text-graphclic-red mb-3 sm:mb-4">GraphClic Studios</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-4 leading-relaxed">
                 Strategic B2B video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers.
               </p>
               <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-red font-semibold hover:gap-3 transition-all">
@@ -163,7 +163,7 @@ export default function AboutPage() {
             >
               <Film className="w-12 h-12 text-graphclic-gold mb-4" />
               <h3 className="text-2xl sm:text-3xl font-black text-graphclic-gold mb-3 sm:mb-4">GraphClic Films</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-4 leading-relaxed">
                 Impact-driven documentary filmmaking that bridges cultures, amplifies underrepresented voices, and drives social change through authentic storytelling.
               </p>
               <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-gold font-semibold hover:gap-3 transition-all">
@@ -175,14 +175,14 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-graphclic-red">
+      <section className="py-12 md:py-16 bg-graphclic-red">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-6 sm:mb-8 px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 px-4"
           >
             Ready to Tell Your Story?
           </motion.h2>
@@ -191,7 +191,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/90 mb-8"
+            className="text-xl text-white/90 mb-6"
           >
             Whether it&apos;s corporate video or documentary film, let&apos;s bring your vision to life.
           </motion.p>

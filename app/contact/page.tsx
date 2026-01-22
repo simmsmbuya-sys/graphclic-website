@@ -104,9 +104,9 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-24 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
               {/* Contact Information */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -114,13 +114,13 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-graphclic-black">Get in Touch</h2>
-                <p className="text-lg text-graphclic-grey mb-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-graphclic-black">Get in Touch</h2>
+                <p className="text-lg text-graphclic-grey mb-6">
                   Whether you need corporate video production or impact documentary filmmaking, we&apos;re here to help bring your vision to life.
                 </p>
 
                 {/* Contact Details */}
-                <div className="space-y-6 mb-10">
+                <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-graphclic-red rounded-full flex items-center justify-center flex-shrink-0">
                       <Mail className="text-white" size={20} />
@@ -148,8 +148,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Service Options */}
-                <div className="mt-12">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-graphclic-black">What We Offer</h3>
+                <div className="mt-8">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-graphclic-black">What We Offer</h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <motion.div
                       whileHover={{ scale: 1.02 }}
@@ -187,7 +187,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-white p-10 rounded-2xl shadow-2xl border-2 border-gray-200"
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-graphclic-black px-4">Send Us a Message</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-graphclic-black px-4">Send Us a Message</h2>
                 
                 {submitStatus === 'success' && (
                   <motion.div
@@ -347,7 +347,7 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -362,7 +362,7 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl mb-10 text-gray-200"
+              className="text-xl mb-6 text-gray-200"
             >
               Explore our work or learn more about our services
             </motion.p>

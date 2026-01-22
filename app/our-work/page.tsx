@@ -277,8 +277,8 @@ export default function OurWorkPage() {
         </section>
 
         {/* Corporate Projects Row - Apple TV Style */}
-        <section className="py-12 bg-black">
-          <div className="mb-6 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 md:py-10 bg-black">
+          <div className="mb-4 px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Corporate</h2>
             <p className="text-gray-400">B2B video production for brands</p>
           </div>
@@ -373,8 +373,8 @@ export default function OurWorkPage() {
         </section>
 
         {/* Documentary Projects Row - Apple TV Style */}
-        <section className="py-12 bg-black">
-          <div className="mb-6 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 md:py-10 bg-black">
+          <div className="mb-4 px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Documentary</h2>
             <p className="text-gray-400">Impact documentaries that drive change</p>
           </div>
@@ -494,7 +494,7 @@ export default function OurWorkPage() {
         )}
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-graphclic-red to-graphclic-red-dark text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

@@ -63,7 +63,7 @@ export default function HomePageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-              className="space-y-8 md:space-y-12"
+              className="space-y-4 md:space-y-6"
             >
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ export default function HomePageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-              className="space-y-6 md:space-y-8"
+              className="space-y-4 md:space-y-6"
             >
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function HomePageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 1.0 }}
-                className="flex flex-col sm:flex-row gap-6 justify-center pt-8 md:pt-12"
+                className="flex flex-col sm:flex-row gap-4 justify-center pt-6 md:pt-8"
               >
                 <Link href="/contact">
                   <motion.button
