@@ -360,7 +360,7 @@ export default function OurWorkPage() {
 
                     {/* Title and Client */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                      <h3 className="text-xl font-bold text-white mb-1 drop-shadow-lg">
+                      <h3 className="text-xl font-bold text-white mb-1">
                         {project.title}
                       </h3>
                       <p className="text-sm text-gray-300">{project.client}</p>
@@ -456,7 +456,7 @@ export default function OurWorkPage() {
 
                     {/* Title and Client */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                      <h3 className="text-xl font-bold text-white mb-1 drop-shadow-lg">
+                      <h3 className="text-xl font-bold text-white mb-1">
                         {project.title}
                       </h3>
                       <p className="text-sm text-gray-300">{project.client}</p>

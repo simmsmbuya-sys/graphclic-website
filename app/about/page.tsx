@@ -24,9 +24,6 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-white mb-4 sm:mb-6 px-4"
-            style={{
-              textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)',
-            }}
           >
             Where Strategic Vision
             <br />
@@ -37,9 +34,6 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-4"
-            style={{
-              textShadow: '0 2px 10px rgba(0,0,0,0.8)',
-            }}
           >
             Two decades of experience. Two divisions. One mission: Tell stories that drive results.
           </motion.p>

@@ -178,9 +178,6 @@ export default function StarzHero() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-white px-4"
-                  style={{
-                    textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.6)',
-                  }}
                 >
                   {currentSlideData.headline}
                 </motion.h1>
@@ -191,9 +188,6 @@ export default function StarzHero() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-graphclic-gold px-4"
-                  style={{
-                    textShadow: '0 4px 20px rgba(212,175,55,0.6), 0 2px 8px rgba(0,0,0,0.6)',
-                  }}
                 >
                   {currentSlideData.subtitle}
                 </motion.h2>
@@ -204,9 +198,6 @@ export default function StarzHero() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
                   className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-4 sm:mt-6 px-4"
-                  style={{
-                    textShadow: '0 2px 10px rgba(0,0,0,0.8)',
-                  }}
                 >
                   {currentSlideData.description}
                 </motion.p>
