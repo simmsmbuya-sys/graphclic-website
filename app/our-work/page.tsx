@@ -241,10 +241,10 @@ export default function OurWorkPage() {
                     {featuredProject.category}
                   </span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 leading-tight px-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 sm:mb-3 leading-[1.1] sm:leading-tight px-2 sm:px-4">
                   {featuredProject.title}
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 px-4">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-4 sm:mb-6 px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2">
                   {featuredProject.client}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">

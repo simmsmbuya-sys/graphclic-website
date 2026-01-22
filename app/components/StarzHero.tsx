@@ -177,7 +177,7 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-white px-4"
+                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-white px-2 sm:px-4"
                 >
                   {currentSlideData.headline}
                 </motion.h1>
@@ -187,7 +187,7 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-graphclic-gold px-4"
+                  className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-graphclic-gold px-2 sm:px-4"
                 >
                   {currentSlideData.subtitle}
                 </motion.h2>
@@ -197,7 +197,7 @@ export default function StarzHero() {
                   initial={false}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-4 sm:mt-6 px-4"
+                  className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mt-3 sm:mt-4 px-3 sm:px-4 leading-[1.6] sm:leading-relaxed"
                 >
                   {currentSlideData.description}
                 </motion.p>

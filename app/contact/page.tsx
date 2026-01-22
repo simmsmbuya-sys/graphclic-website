@@ -88,7 +88,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-5 leading-[1.1] sm:leading-tight px-2 sm:px-4"
             >
               Let&apos;s Tell Your Story
             </motion.h1>
@@ -96,7 +96,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto px-4"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2 sm:mt-3"
             >
               Ready to create compelling video content that drives results? Let&apos;s discuss your project.
             </motion.p>
@@ -114,8 +114,8 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-graphclic-black">Get in Touch</h2>
-                <p className="text-lg text-graphclic-grey mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-graphclic-black leading-[1.2] sm:leading-tight">Get in Touch</h2>
+                <p className="text-base sm:text-lg text-graphclic-grey mb-4 sm:mb-5 leading-[1.7] sm:leading-relaxed">
                   Whether you need corporate video production or impact documentary filmmaking, we&apos;re here to help bring your vision to life.
                 </p>
 
@@ -187,7 +187,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-white p-10 rounded-2xl shadow-2xl border-2 border-gray-200"
               >
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-graphclic-black px-4">Send Us a Message</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-5 text-graphclic-black px-2 sm:px-4 leading-[1.2] sm:leading-tight">Send Us a Message</h2>
                 
                 {submitStatus === 'success' && (
                   <motion.div

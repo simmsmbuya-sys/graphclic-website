@@ -23,7 +23,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight text-white mb-4 sm:mb-6 px-4"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] sm:leading-tight text-white mb-3 sm:mb-5 px-2 sm:px-4"
           >
             Where Strategic Vision
             <br />
@@ -33,7 +33,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-4"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto px-3 sm:px-4 leading-[1.6] sm:leading-relaxed mt-2 sm:mt-3"
           >
             Two decades of experience. Two divisions. One mission: Tell stories that drive results.
           </motion.p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-4 sm:mb-6 text-center px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-3 sm:mb-5 text-center px-3 sm:px-4 leading-[1.2] sm:leading-tight"
           >
             Our Story
           </motion.h2>
@@ -103,13 +103,13 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="prose prose-lg max-w-none text-gray-700"
           >
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-base sm:text-lg leading-[1.7] sm:leading-relaxed mb-3 sm:mb-4 text-gray-700">
               GraphClic was founded on a simple belief: every story deserves to be told with cinematic excellence, whether it&apos;s driving business results or inspiring social change.
             </p>
-            <p className="text-lg leading-relaxed mb-4">
+            <p className="text-base sm:text-lg leading-[1.7] sm:leading-relaxed mb-3 sm:mb-4 text-gray-700">
               With over 30 years of combined experience, our team has produced award-winning content for Fortune 500 companies, non-profits, foundations, and cultural institutions across the DMV region and beyond.
             </p>
-            <p className="text-lg leading-relaxed">
+            <p className="text-base sm:text-lg leading-[1.7] sm:leading-relaxed text-gray-700">
               Today, we operate two distinct divisions—GraphClic Studios for strategic B2B video production and GraphClic Films for impact-driven documentary filmmaking—united by our commitment to storytelling excellence.
             </p>
           </motion.div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-8 sm:mb-10 text-center px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5 sm:mb-8 text-center px-3 sm:px-4 leading-[1.2] sm:leading-tight"
           >
             Two Divisions. One Mission.
           </motion.h2>
@@ -139,7 +139,7 @@ export default function AboutPage() {
             >
               <Briefcase className="w-12 h-12 text-graphclic-red mb-4" />
               <h3 className="text-2xl sm:text-3xl font-black text-graphclic-red mb-3 sm:mb-4">GraphClic Studios</h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-300 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed text-sm sm:text-base">
                 Strategic B2B video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers.
               </p>
               <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-red font-semibold hover:gap-3 transition-all">
@@ -157,7 +157,7 @@ export default function AboutPage() {
             >
               <Film className="w-12 h-12 text-graphclic-gold mb-4" />
               <h3 className="text-2xl sm:text-3xl font-black text-graphclic-gold mb-3 sm:mb-4">GraphClic Films</h3>
-              <p className="text-gray-300 mb-4 leading-relaxed">
+              <p className="text-gray-300 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed text-sm sm:text-base">
                 Impact-driven documentary filmmaking that bridges cultures, amplifies underrepresented voices, and drives social change through authentic storytelling.
               </p>
               <Link href="/services" className="inline-flex items-center gap-2 text-graphclic-gold font-semibold hover:gap-3 transition-all">

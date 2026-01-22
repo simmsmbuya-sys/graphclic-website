@@ -20,10 +20,10 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="max-w-[1400px] text-center"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-graphclic-red mb-4 sm:mb-6 tracking-tight px-4">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-graphclic-red mb-3 sm:mb-5 tracking-tight px-2 sm:px-4 leading-[1.1] sm:leading-tight">
               Our Services
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 max-w-[700px] mx-auto leading-relaxed font-medium px-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 max-w-[700px] mx-auto leading-[1.6] sm:leading-relaxed font-normal px-3 sm:px-4 mt-2 sm:mt-3">
               Two specialized divisions working in harmony to create powerful video content that drives business results and inspires social change.
             </p>
           </motion.div>
@@ -62,15 +62,15 @@ export default function ServicesPageClient() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="space-y-3 order-1 lg:order-2"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-2 sm:mb-3 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-2 sm:mb-3 tracking-tight leading-[1.1] sm:leading-tight">
                 GraphClic Studios
               </h2>
               
-              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-red/90 mb-2 sm:mb-3 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-red/90 mb-2 sm:mb-3 font-bold leading-[1.2] sm:leading-tight">
                 B2B Video Production
               </h3>
               
-              <p className="text-lg sm:text-xl text-gray-800 mb-4 leading-relaxed max-w-[600px] font-medium">
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed max-w-[600px] font-normal">
                 Strategic video production that drives business results. We create content that educates stakeholders, builds brand equity, and converts viewers into customers. Every frame is crafted with your business goals in mind.
               </p>
 
@@ -125,15 +125,15 @@ export default function ServicesPageClient() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="space-y-3 order-1"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-2 sm:mb-3 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-gold mb-2 sm:mb-3 tracking-tight leading-[1.1] sm:leading-tight">
                 GraphClic Films
               </h2>
               
-              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-gold/90 mb-2 sm:mb-3 font-bold">
+              <h3 className="text-xl sm:text-2xl md:text-3xl text-graphclic-gold/90 mb-2 sm:mb-3 font-bold leading-[1.2] sm:leading-tight">
                 Impact-Driven Documentary Filmmaking
               </h3>
               
-              <p className="text-lg sm:text-xl text-gray-800 mb-4 leading-relaxed max-w-[600px] font-medium">
+              <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-3 sm:mb-4 leading-[1.7] sm:leading-relaxed max-w-[600px] font-normal">
                 We tell authentic stories that bridge cultures, amplify underrepresented voices, and drive social impact. From USA-Africa partnerships to community narratives, our documentaries inspire action and create lasting change.
               </p>
 
@@ -205,7 +205,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="mb-6 md:mb-8"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-3 sm:mb-4 tracking-tight text-center px-3">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-graphclic-red mb-3 sm:mb-4 tracking-tight text-center px-2 sm:px-3 leading-[1.1] sm:leading-tight">
               Our Approach
             </h2>
           </motion.div>
